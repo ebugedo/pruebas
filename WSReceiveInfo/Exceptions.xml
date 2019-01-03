@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ROOT>
+  <Exceptions>
+      <Exception>
+        <Type>1</Type>
+        <ExceptionId>-2147352558</ExceptionId>
+        <Message>El error es del tipo, numero dividido por cero.</Message>
+      </Exception>
+      <Exception>
+        <Type>2</Type>
+        <ExceptionId>-2147352555</ExceptionId>
+        <Message>Ha habido un error, contacte con el administrador</Message>
+    </Exception>
+    <Exception>
+      <Type>2</Type>
+      <ExceptionId>-2146233088</ExceptionId>
+      <Message>Ha habido un error, contacte con el administrador</Message>
+    </Exception>
+    <Exception>
+      <Type>2</Type>
+      <ExceptionId>-2147467259</ExceptionId>
+      <Message>Detailed information about the event</Message>
+    </Exception>
+    <Exception>
+      <Type>2</Type>
+      <ExceptionId>-2146233080</ExceptionId>
+      <Message>Overflow</Message>
+    </Exception>
+  </Exceptions>
+</ROOT>
+

@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A299728-EC80-4D8B-A433-D714303E3A7C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Daemon</RootNamespace>
+    <AssemblyName>SEPA_COMEX_Call_Factiva</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\WS_CreateJob\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WS_CreateJob\ServiceSmm.wsdl" />
+    <None Include="Service References\WS_CreateJob\Service_CreateJob.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WS_CreateJob\Service_CreateJob1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\001 - Productos KIWI\007 - Arquitectura\Fuentes\GRAL_Arquitectura\CAP1_Automatization\CAP1_Automatization.csproj">
+      <Project>{ddb26850-c2a0-4648-8806-8909a3bcddb9}</Project>
+      <Name>CAP1_Automatization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\001 - Productos KIWI\007 - Arquitectura\Fuentes\GRAL_Arquitectura\CAP1_Constantes\CAP1_Constantes.csproj">
+      <Project>{9b15db45-fbec-4f3f-b21b-7804f079f3f6}</Project>
+      <Name>CAP1_Constantes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\001 - Productos KIWI\007 - Arquitectura\Fuentes\GRAL_Arquitectura\CAP1_Datos\CAP1_Datos.csproj">
+      <Project>{0877638d-7228-469b-8664-f3831ecdedc2}</Project>
+      <Name>CAP1_Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\001 - Productos KIWI\007 - Arquitectura\Fuentes\GRAL_Arquitectura\CAP1_Encriptacion\CAP1_Encriptacion.csproj">
+      <Project>{a0d62cf4-e5fc-4396-a26b-9541cd98dfb3}</Project>
+      <Name>CAP1_Encriptacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\001 - Productos KIWI\007 - Arquitectura\Fuentes\GRAL_Arquitectura\CAP1_Utilidades\CAP1_Utilidades.csproj">
+      <Project>{6b28a0e6-fd4a-420d-a3f1-1c146db9ed5b}</Project>
+      <Name>CAP1_Utilidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\001 - Productos KIWI\007 - Arquitectura\Fuentes\GRAL_Arquitectura\CAP1_Xml\CAP1_Xml.csproj">
+      <Project>{1e9c3323-ef8b-4407-9c8a-81e2d243f5f7}</Project>
+      <Name>CAP1_Xml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WS_CreateJob\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_CreateJob\Service_CreateJob.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_CreateJob\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_CreateJob\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WS_CreateJob\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

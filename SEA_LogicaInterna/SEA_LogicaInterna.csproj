@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{157C287F-1D9E-4230-A5F9-E4EFADBB9A2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SEA_LogicaInterna</RootNamespace>
+    <AssemblyName>SEA_LogicaInterna</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Metodos.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\001 - Productos KIWI\007 - Arquitectura\Fuentes\GRAL_Arquitectura\CAP1_Automatization\CAP1_Automatization.csproj">
+      <Project>{ddb26850-c2a0-4648-8806-8909a3bcddb9}</Project>
+      <Name>CAP1_Automatization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\001 - Productos KIWI\007 - Arquitectura\Fuentes\GRAL_Arquitectura\CAP1_Datos\CAP1_Datos.csproj">
+      <Project>{0877638d-7228-469b-8664-f3831ecdedc2}</Project>
+      <Name>CAP1_Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\001 - Productos KIWI\007 - Arquitectura\Fuentes\GRAL_Arquitectura\CAP1_Email\CAP1_Email.csproj">
+      <Project>{4A4A8017-F01D-495D-B14C-4C1B204246C1}</Project>
+      <Name>CAP1_Email</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\001 - Productos KIWI\007 - Arquitectura\Fuentes\GRAL_Arquitectura\CAP1_Ficheros\CAP1_Ficheros.csproj">
+      <Project>{FC881353-0E4B-46B6-82C7-DD9A0F85EA4A}</Project>
+      <Name>CAP1_Ficheros</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\001 - Productos KIWI\007 - Arquitectura\Fuentes\GRAL_Arquitectura\CAP1_Interfaces\CAP1_Interfaces.csproj">
+      <Project>{2C1CE8F2-F102-4A22-9567-1D67F411D75F}</Project>
+      <Name>CAP1_Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\001 - Productos KIWI\007 - Arquitectura\Fuentes\GRAL_Arquitectura\CAP1_Utilidades\CAP1_Utilidades.csproj">
+      <Project>{6B28A0E6-FD4A-420D-A3F1-1C146DB9ED5B}</Project>
+      <Name>CAP1_Utilidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\001 - Productos KIWI\007 - Arquitectura\Fuentes\GRAL_Arquitectura\CAP1_Xml\CAP1_Xml.csproj">
+      <Project>{1e9c3323-ef8b-4407-9c8a-81e2d243f5f7}</Project>
+      <Name>CAP1_Xml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
